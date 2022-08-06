@@ -42,7 +42,6 @@ module.exports = function check(str, bracketsConfig) {
     let point;
 
     function validate() {
-        log('do...');
         searchPoint();
         if (point === null) {
             if(arrayFromStr.length === 0){
@@ -54,7 +53,6 @@ module.exports = function check(str, bracketsConfig) {
             }
         }
         arrayFromStr = deletePoint(point[0], point[1], arrayFromStr);
-        log(arrayFromStr);
         point = null;
         return validate();
     }
